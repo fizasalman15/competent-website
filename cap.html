@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Components Solutions</title>
+    <link rel = "icon" href = "images/logobgrem.png" type = "images/bgbox">
+    <style>
+        body{
+            background-color: black;
+        }
+        </style>
+   
+   
+</head>
+<body>
+    <header>
+        <div class="navbar">
+        <div class="logo"><img src="images/logobgrem.png"></div>
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cap.html">Capabilities</a></li>
+            <li><a href="Aboutus.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+        <div class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        </div>
+        <div class="dropdown_menu ">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cap.html">Capabilities</a></li>
+            <li><a href="Aboutus.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+        </div>
+    </header>
+
+    <script>
+        const togglebtn = document.querySelector('.toggle-btn')
+        const togglebtnicon = document.querySelector('.toggle-btn i')
+        const dropdownmenu = document.querySelector('.dropdown_menu')
+        togglebtn.onclick = function (){
+            dropdownmenu.classList.toggle('open')
+            const isopen = dropdownmenu.classList.contains('open')
+            togglebtnicon.classList = isopen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>
